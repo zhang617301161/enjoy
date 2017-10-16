@@ -1,0 +1,68 @@
+@import "main.scss";
+.login_content{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    .login_one{
+        margin-top: 70px;
+        width: 100%;
+        height: 50px;
+        @include flexBox
+        @include flex-center
+        #logo{
+            width: 70%;
+        }      
+    }
+    .phone{
+        width: 100%;
+        margin-top: 50px;
+        padding-top: 20px;
+        input{
+            box-sizing: border-box;
+            width: 100%;
+            height: 40px;
+            outline: none;
+            padding-left: 12px;
+            color: #2c3038;
+            border-radius: 5px;
+            &:nth-of-type(2){
+                margin-top: 10px;
+            }
+            &:nth-of-type(3){
+                border-radius: 10px;
+                margin-top: 40px;
+                background: #1a1a1a;
+                color: #fff;
+                height: 50px;
+            }
+        }
+    }
+    .login_two{
+        margin-top: 60px;
+        p{
+            font-size: 14px;
+            color: rgb(146, 150, 156);
+            text-align: center;
+            line-height: 20px;
+            a{
+                color: rgb(44, 48, 56);
+                text-decoration: underline;
+            }
+        }
+    }
+    #toast{
+        position: absolute;
+        bottom: 0px;
+        width: 60%;
+        left:20%;
+        background-color: rgba(0,0,0,0.4);
+        color: #fff;
+        line-height: 22px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 8px;
+        display: none;
+
+    }
+}
+    

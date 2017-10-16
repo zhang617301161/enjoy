@@ -1,0 +1,149 @@
+@import "main.scss";
+
+#content{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+   @include flex(1);
+    .scontent{ 
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        @include flex(1);
+        padding: 0;
+       .pList{
+           padding: 0 10px;
+           li{
+               @include flexBox;
+               width: 97%;
+               padding-top: 10px;
+               padding-bottom: 10px;
+               border-bottom: 1px solid #eee;
+               .left{
+                    flex: 2;
+                   img{
+                       width: 100%;
+                   } 
+                }
+                .right{
+                    flex: 3;
+                    position: relative;
+                    p{ 
+                        padding-left: 12px;                                     
+                        line-height: 30px;
+                        color: #2c3038;
+                        font-size: 14px;
+                        &:nth-of-type(1){
+                            font-weight: bold;
+                            width: 180px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        &:nth-of-type(2){
+                            font-size: 14px;
+                            padding-left: 12px;
+                            color: #ff3939;     
+                            
+                        }
+                        &:nth-of-type(3){
+                            font-size: 14px;
+                            padding-left: 12px;    
+                            span{
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                                border: 1px solid #eee;
+                                border-right: 1px solid #eee;
+                                line-height: 30px;
+                                text-align: center;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    h6{
+                        position: absolute;
+                        right: 10px;
+                        bottom: 10px;
+                        font-weight: normal;
+                    }                                          
+                }
+           }
+        }
+        .like{
+            p{
+                line-height: 40px;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+            }
+            .likeList{
+                width: 90%;
+                margin: 0 auto;
+                @include flexBox
+                flex-wrap: wrap;
+                li{
+                    width: 48%;
+                    &:nth-of-type(odd){
+                        margin-right: 12px;
+                    }                   
+                    img{
+                        width: 150px;
+                    }
+                    .likePrice{
+                        color: #2c3038;
+                        font-size: 14px;
+                        &:nth-of-type(1){
+                            width: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        &:nth-of-type(2){
+                            color: #ff3939;
+                            text-align: left;
+                            a{
+                                padding-left: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .account{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border-top: 1px solid #eee;
+            @include flexBox;
+            line-height: 50px;            
+            .account-one{
+                flex: 3;
+                color: #ff3939;
+                padding-left: 20px;
+            }
+            .account-two{
+                flex: 2;
+                text-align: center;
+                background: #ff3939;
+                color: #fff;
+            }
+        }
+        
+        .cart-empty{
+            padding: 100px 0px;
+            text-align: center;
+            img{
+                width: 150px;
+                height: 150px;
+            }
+            p{
+                color: #92969c;
+                font-size: 14px;
+            }
+        }
+    }
+}

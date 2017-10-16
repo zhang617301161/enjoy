@@ -1,0 +1,154 @@
+@import "main.scss";
+.commonHeader{
+    width: 100%;
+    height: 100%;
+    @include flexBox;
+    @include flex-direction("row");
+    text-align: center;
+    font-weight: normal;
+    .header-one{
+        width: 46px;
+        padding-left: 14px;
+        line-height: 44px;
+        p{
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+    .header-two{
+        width: 120px;
+        padding-left: 60px;
+        line-height: 44px;
+        @include flexBox;
+        text-align: center;
+        p{
+            font-size: 24px;
+        }
+        b{
+            display: block;
+            width: 30px;
+            font-size: 12px;
+            padding-left: 2px;
+        }
+    }
+    .header-three{
+        flex: 1;
+        @include flex-center;
+        p{
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+    .header-four{
+        flex: 1;
+        @include flex-center;
+        p{
+            font-size: 18px;
+            text-align: left;
+        }
+    }
+}
+          
+#content{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+   @include flex(1);
+    .pcontent{ 
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        @include flex(1);
+        padding: 0;
+       .pList{
+           padding: 0 10px;
+           li{
+               @include flexBox;
+               width: 97%;
+               padding-top: 10px;
+               padding-bottom: 10px;
+               border-bottom: 1px solid #eee;
+               .left{
+                    flex: 2;
+                   img{
+                       width: 100%;
+                   } 
+                }
+                .right{
+                    flex: 3;
+                    p{ 
+                        padding-left: 12px;                                     
+                        line-height: 30px;
+                        color: #2c3038;
+                        font-size: 14px;
+                        &:nth-of-type(1){
+                            font-weight: bold;
+                        }
+                        &:nth-of-type(2){
+                            font-size: 14px;
+                            a{
+                                &:nth-of-type(1){
+                                    color: #ff3939;
+                                }
+                                &:nth-of-type(2){
+                                    text-decoration: line-through;
+                                    padding-left: 20px;
+                                }
+                                
+                            }
+                        }
+                    }                                          
+                }
+           }
+        }
+        .title{
+            width: 100%;
+            @include flexBox
+            position: relative;
+            border-bottom: 1px solid #eee;
+            height: 50px;
+            .active{
+                border-bottom: 2px solid #01172C;
+            }
+            .title-sort{
+                .titleActive{
+                    color: #f66;
+                }
+            }
+            .title-left{
+                flex: 1;
+                border-right: 1px solid #eee;
+                p{
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 50px;
+                    color: #2c3038;
+                    font-weight: bold;
+                }
+            }
+            .title-right{
+                flex: 1;
+                p{
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 50px;
+                    color: #2c3038;
+                    font-weight: bold;
+                }
+            }
+            ul{
+                position: absolute;
+                left: 0;
+                top: 50px;
+                width: 100%;
+                background: #fff;
+                display: none;
+                li{
+                    line-height: 40px;
+                    text-align: center;
+                    border-bottom: 1px solid #eee;
+                }
+            }
+        }
+    }
+}

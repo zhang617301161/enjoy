@@ -1,0 +1,180 @@
+@import "main.scss";
+.commonHeader{
+    width: 100%;
+    height: 100%;
+    @include flexBox;
+    @include flex-direction("row");
+    text-align: center;
+    font-weight: normal;
+    .header-one{
+        width: 46px;
+        padding-left: 14px;
+        line-height: 44px;
+        p{
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+    .header-two{
+        width: 120px;
+        padding-left: 60px;
+        line-height: 44px;
+        @include flexBox;
+        text-align: center;
+        p{
+            font-size: 24px;
+        }
+        b{
+            display: block;
+            width: 30px;
+            font-size: 12px;
+            padding-left: 2px;
+        }
+    }
+    .header-three{
+        flex: 1;
+        @include flex-center;
+        p{
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+    .header-four{
+        flex: 1;
+        @include flex-center;
+        p{
+            font-size: 18px;
+            text-align: left;
+        }
+    }
+}
+          
+#content{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+   @include flex(1);
+    .kcontent{ 
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        @include flex(1);
+        
+        .kind-one{
+            padding: 0 10px;
+            .caption{
+                margin: 17px 0 10px;
+                position: relative;
+                h5{
+                    color: #191919;
+                    font-size: 26px;
+                    font-weight: bold;
+                    line-height: 26px;
+                }
+                p{
+                    color: #92969c;
+                    font-size: 12px;
+                    line-height: 14px;
+                    font-weight: bold;
+                }
+            }
+            #swiper-one{
+                width: 100%;
+                height: 320px;
+                border-bottom: 1px solid #eee;
+                img{
+                    width: 100%;
+                    height: 220px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    &:nth-of-type(1){
+                        color: #ff3939;
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                    &:nth-of-type(2){
+                        color: #000;
+                        font-size: 16px;
+                        line-height: 30px;
+                        font-weight: bold;
+                    }
+                    &:nth-of-type(3){
+                        color: #9b9b9b;
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                }
+                #pagination-one{
+                    position: absolute;
+                    right: 0px;
+                    top: 190px;
+                    font-size: 20px;
+                    color: #9b9b9b;
+                }
+            }
+            #swiper-two{
+                width: 100%;
+                border-bottom: 1px solid #eee;
+                .opacity{
+                    width: 170px;
+                    height: 100px;
+                    margin: 15px 0;
+                    background: rgba(0,0,0,.4);
+                    padding-top: 15px;
+                    p{
+                        color: #fff;
+                        text-align: center;
+                        &:nth-of-type(1){
+                            font-size: 18px;
+                            margin-top: 15px;
+                            line-height: 24px;
+                        }
+                        &:nth-of-type(2){
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .kind-two,.kind-three,.kind-four{
+            width: 100%;
+            padding: 25px 0;
+            h5{
+                line-height: 22px;
+                padding-left: 10px;
+                padding-right: 10px;
+                a{
+                    color: #2c3038;
+                    font-size: 18px;                      
+                    font-weight: bold;
+                }
+                span{
+                    color: #ff3939;
+                    font-size: 16px;                      
+                    font-weight: bold;
+                    padding-left: 190px;
+                }
+            }
+            p{
+                color: #92969c;
+                font-size: 12px;                      
+                font-weight: bold;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .pics{
+                padding: 0;
+                border-bottom: 1px solid #eee;
+                width: 100%;
+                @include flexBox;
+                img{
+                    width: 33%;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
